@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>EDIT POST</h1>
+<div mat-dialog-content>
+    ** He dejado todo muy sencillo. Funcional, con el uso de los ngModel y con las validaciones justas
+
+    <div class="dialog-container">
+        <form [formGroup]="editablePost">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" [(ngModel)]="defaultTitle" placeholder="defaultTitle">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Body</mat-label>
+                <input matInput formControlName="body" [(ngModel)]="defaultBody" placeholder="defaultBody">
+            </mat-form-field>
+
+        </form>
+    <div>
+
+</div>
+<div mat-dialog-actions>
+    <button class="button-secondary" (click)="close()" mat-button>EXIT</button>
+    <button class="button-primary" (click)="editPost()" mat-button>EDIT</button>
+</div>

@@ -1,0 +1,48 @@
+
+<!--
+<mat-toolbar class="second-toolbar" [ngStyle]="{'display': isMobile ? 'block' : 'none' }">
+    <button mat-button class="menu-button" (click)="sidenav.toggle()">
+        <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+</mat-toolbar>
+
+
+  <mat-sidenav-container class="sidenav-container" [ngStyle]="{'display': isMobile ? 'block' : 'none' }">
+    <mat-sidenav #sidenav autoFocus="false" mode="over" [(opened)]="isMenuOpen" class="sidenav" (click)="onSidenavClick()">
+        <mat-nav-list>
+            <a class="list-item" mat-list-item [routerLink]="['/home/dashboard']">Inicio</a>
+            <h2 class="subheader" matSubheader> Jugadores </h2>
+            <a class="list-item" mat-list-item [routerLink]="['/home/players-list']">Listado</a>
+            <a class="list-item" mat-list-item [routerLink]="['/home/players-report']">Report</a>
+            <h2 class="subheader" matSubheader> Listas </h2>
+            <a class="list-item" mat-list-item [routerLink]="['/home/list-search']">Buscador</a>
+            <a class="list-item" mat-list-item [routerLink]="['/home/winners']">Listas ganadoras</a>
+            <a class="list-item" mat-list-item [routerLink]="['/home/match-up']">Versus</a>
+            <h3 class="subheader" matSubheader> Competición </h3>
+            <a class="list-item" mat-list-item [routerLink]="['/home/holocron']">Circuito Holocrón</a>
+            <a class="list-item" mat-list-item [routerLink]="['/home/tournaments-list']">Torneos</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <main class="content">
+            <router-outlet #o="outlet"></router-outlet>
+        </main>
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>  
+-->
+
+<mat-toolbar class="second-toolbar">
+    <button mat-button [routerLink]="['/home/posts']">All posts</button>
+    <button mat-button [routerLink]="['/home/admin']">Admin Posts</button>
+</mat-toolbar>
+
+<main class="content">
+    <router-outlet #o="outlet"></router-outlet>
+</main>
+
+
+<mat-toolbar-row class="copyright">
+    <p>© 2021 Angular Prueba Atos
+    </p>
+</mat-toolbar-row>

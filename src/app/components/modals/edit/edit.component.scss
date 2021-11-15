@@ -1,0 +1,10 @@
+@import "src/theme/theme-variables";
+
+.mat-form-field {
+    display: flex;
+    min-width: 400px;
+    
+    ::ng-deep div {
+        width: 100%;
+    }
+}

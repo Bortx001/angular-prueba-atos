@@ -1,0 +1,23 @@
+
+
+<div class="page-container">
+
+<button class="button-primary" (click)="newPost()" mat-button>NEW POST</button>
+
+  <div *ngIf="allPosts">
+  <mat-card *ngFor="let item of allPosts">
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle>User: {{ item.userId }}</mat-card-subtitle> 
+      </mat-card-header>
+      <mat-card-content>
+      {{ item.body }}
+      </mat-card-content>
+      <mat-card-actions>
+          <button class="button-delete" (click)="deletePost(item)" mat-button>DELETE</button>
+          <button class="button-primary" (click)="editPost(item)" mat-button>EDIT</button>
+        </mat-card-actions>
+    </mat-card>
+
+  </div>
+</div>

@@ -1,0 +1,144 @@
+// MOBILE
+@mixin screen-size-mobile-smallest() {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin screen-size-mobile-tiny() {
+    @media only screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin screen-size-mobile() {
+    @media only screen and (max-width: 639px) {
+        @content;
+    }
+}
+
+@mixin screen-size-little-mobile() {
+    @media only screen and (max-height: 500px) and (max-width: 350px) {
+        @content;
+    }
+}
+
+// TABLET-MOBILE
+@mixin screen-size-tablet-mobile() {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+// TABLET PORTRAIT
+@mixin screen-size-tablet-portrait() {
+    @media only screen and (min-width: 640px) and (max-width: 959px) {
+        @content;
+    }
+}
+
+// TABLET MIN
+@mixin screen-size-tablet-up() {
+    @media only screen and (min-width: 640px) {
+        @content;
+    }
+}
+
+// TABLET MIN
+@mixin screen-size-tablet-min() {
+    @media only screen and (min-width: 640px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+// TABLET LANDSCAPE
+@mixin screen-size-tablet-landscape() {
+    @media only screen and (min-width: 960px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+// DESKTOP
+@mixin screen-size-desktop() {
+    @media only screen and (min-width: 1200px) and (max-width: 1799px) {
+        @content;
+    }
+}
+
+// DESKTOP MIN
+@mixin screen-size-desktop-min() {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+// LIMIT
+@mixin screen-size-limit-min() {
+    @media only screen and (min-width: 1440px) {
+        @content;
+    }
+}
+
+// DESKTOP BIG
+@mixin screen-size-desktop-big() {
+    @media only screen and (min-width: 1800px) {
+        @content;
+    }
+}
+
+
+/* Optimiza el renderizado de la tipografía  */
+
+@mixin text-rendering-antialiased {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+
+/* transición general */
+
+@mixin general-transition {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin general-transition-fast {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+@mixin ie-only {
+    .msie & {
+        @content;
+    }
+}
+
+@mixin edge-only() {
+    .edge & {
+        @content;
+    }
+}
+
+@mixin ie-and-edge() {
+    .msie & {
+        @content;
+    }
+    .edge & {
+        @content;
+    }
+}
+
+@mixin is-firefox {
+    .firefox & {
+        @content;
+    }
+}

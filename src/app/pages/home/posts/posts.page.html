@@ -1,0 +1,27 @@
+<div class="page-container" *ngIf="allPosts">
+
+  <mat-form-field>
+    <input type="text" placeholder="Enter City" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)='filterByUser($event.option.value)'>
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+<mat-card *ngFor="let item of allPosts">
+    <mat-card-header>
+      <mat-card-title>{{ item.title }}</mat-card-title>
+      <mat-card-subtitle *ngIf = "users">{{ users.getUserDetail( item.userId ) }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+     {{ item.body }}
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="button-primary" (click)="detail(item.id)" mat-button>DETALLE</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+<app-no-data *ngIf="noData" text="No results found..."></app-no-data>

@@ -1,0 +1,34 @@
+<div class="page-container" *ngIf="post">
+
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-subtitle>{{ postCreator }}</mat-card-subtitle> 
+    </mat-card-header>
+    <mat-card-content>
+     {{ post.body }}
+    </mat-card-content>
+
+    <mat-accordion>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" *ngIf="comments" class="comments-container">
+        <mat-expansion-panel-header>
+
+          <mat-panel-title>
+              <button class="button-primary" mat-button>COMENTARIOS {{ comments.totalComments}}</button>
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <mat-card *ngFor="let comment of comments.getAllComments()">
+          <mat-card-title>{{ comment.title }}</mat-card-title>
+          <mat-card-subtitle *ngIf="!users">{{ comments.getUserWithEmail( comment.id ) }}</mat-card-subtitle>
+          <mat-card-subtitle *ngIf="users">{{ users.getUserDetail( comment.id ) }}</mat-card-subtitle>
+          <mat-card-content> {{ comment.body }} </mat-card-content>
+        </mat-card>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </mat-card>
+
+</div>

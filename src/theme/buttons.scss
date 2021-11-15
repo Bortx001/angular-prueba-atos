@@ -1,0 +1,18 @@
+button {
+    &.button-primary {
+        background-color: $main-darkgrey;
+        color: #FFFFFF;
+    }
+    &.button-primary[disabled] {
+        background-color: $main-lightgrey;
+        color: #FFFFFF;
+    }
+    &.button-secondary {
+        background-color: $seconday-color;
+        color: #FFFFFF;
+    }
+    &.button-delete {
+        background-color: $delete-color;
+        color: #FFFFFF;
+    }
+}

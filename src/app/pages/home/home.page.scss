@@ -1,0 +1,25 @@
+@import "src/theme/theme-variables";
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    height: 120px;
+}
+
+.second-toolbar {
+    background-color: rgb(12, 128, 161);
+    color: #FFFFFF;
+    height: 55px;
+    @include screen-size-mobile() {
+        height: 40px;
+    }
+}
+
+.toolbar-button {
+    background: transparent;
+    border: 0;
+    color: #FFFFFF;
+}

@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>NEW POST</h1>
+<div mat-dialog-content>
+    ** He dejado todo muy sencillo. Funcional, con el uso de los ngModel y con las validaciones justas
+
+    <div class="dialog-container">
+        <form [formGroup]="createPost">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" placeholder="Title">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Body</mat-label>
+                <input matInput formControlName="body" placeholder="Body">
+            </mat-form-field>
+
+        </form>
+    <div>
+
+</div>
+<div mat-dialog-actions>
+    <button class="button-secondary" (click)="close()" mat-button>EXIT</button>
+    <button class="button-primary" (click)="newPost()" mat-button>CREATE</button>
+</div>
