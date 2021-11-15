@@ -2,8 +2,6 @@ Borja Abasolo Prieto
 
 borja.abasolo.prieto@gmail.com
 
-605736133
-
 Prueba técnica Angular ATOS (15-Nov-2021)
 
 - El core he usado la versión 9.0 básicamente porque el entorno actual lo tengo en esa versión, no por otra cosa.
