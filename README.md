@@ -12,3 +12,6 @@ Prueba técnica Angular ATOS (15-Nov-2021)
 
 - En la selección de usuarios he incluido "Show no data" mayormente para aplicar el uso de componente con parámetros @Input. Para las cards de los posts también podría haber creado un componente general, pero teniendo ese de ejemplo he pensado que era suficiente.
 
+Prueba técnica Angular ATOS (15-Dic-2021)
+
+- He añadido unos tests de control de DOM, creación de elementos y llamadas con validación de los servicios utilizados por el API contra mock de datos locales.
