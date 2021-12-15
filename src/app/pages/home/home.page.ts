@@ -5,6 +5,7 @@ import { PostsService } from '@app/services/posts/posts.service';
 import { UtilsService } from '@app/services/utils/utils.service';
 import { UsersLisModel } from '@app/models/users.model';
 import { CommentsLisModel } from '@app/models/comments.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomePage implements OnInit, OnDestroy, AfterViewInit {
     private usersService: UsersService,
     private postsService: PostsService,
     private utilsService: UtilsService,
+    private router: Router
   ) { }
 
   ngOnDestroy() {
@@ -52,4 +54,8 @@ export class HomePage implements OnInit, OnDestroy, AfterViewInit {
       const allComments = new CommentsLisModel( response );
     });
   }
+
+  public nav(url: string) {
+    this.router.navigate([url]);
+}
 }
